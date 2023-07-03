@@ -22,7 +22,7 @@ target_include_directories(example PUBLIC "${CMAKE_SOURCE_DIR}/include")
 add_library(example-static STATIC ${SOURCE_FILES})
 target_include_directories(example-static PUBLIC "${CMAKE_SOURCE_DIR}/include")
 
-# Example
+# Unit testing
 file(GLOB_RECURSE TEST_SOURCE_FILES "${CMAKE_SOURCE_DIR}/test/*.cpp")
 add_executable(example-tests "${TEST_SOURCE_FILES}")
 target_include_directories(example-tests PUBLIC "${CMAKE_SOURCE_DIR}/include")
