@@ -7,7 +7,8 @@ include(cmx)
 cmx_include_scripts() # Enable sanitizers on supported platforms and extend compiler warnings
 
 # Library
-cmx_add_library(example "${CMAKE_SOURCE_DIR}/src" "${CMAKE_SOURCE_DIR}/include")
+cmx_add_library(example "${CMAKE_SOURCE_DIR}/src")
+target_include_directories(example PUBLIC "${CMAKE_SOURCE_DIR}/include")
 
 # Unit testing
 cmx_add_tests(example-tests "${CMAKE_SOURCE_DIR}/test")
